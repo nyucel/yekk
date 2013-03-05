@@ -8,4 +8,3 @@ YEKK tek kullanımlık bir parola üreten ve bu parolanın oturum açmak için k
 ## Gereksinimler
 * Temel Linux bilgisi 
 * Android ile en azından başlangıç düzeyinde kodlama yapmış olmak
-* Django web çatısı kullanmış olmak
