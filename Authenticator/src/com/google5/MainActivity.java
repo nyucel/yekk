@@ -5,16 +5,12 @@ import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
-
 import com.google.android.apps.authenticator.Base32String;
 import com.google.android.apps.authenticator.PasscodeGenerator;
 import com.google.android.apps.authenticator.Base32String.DecodingException;
-
 import javax.crypto.spec.SecretKeySpec;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -32,11 +28,11 @@ public class MainActivity extends Activity {
 		final TextView rastgele = (TextView)findViewById(R.id.textView1);
 		final TextView rastgele2 = (TextView)findViewById(R.id.textView2);
 		
-		 final Timer zamanlayici;
-		 final Handler yardimci;
-		 final long ZAMAN = 1000;
+		final Timer zamanlayici;
+		final Handler yardimci;
+		final long ZAMAN = 1000;
 		 
-		 final String chars = "abcdefghijklmnopqrstuvwxyz"
+		final String chars = "abcdefghijklmnopqrstuvwxyz"
 	                + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	    
 		final Random rnd = new SecureRandom();
@@ -56,7 +52,7 @@ public class MainActivity extends Activity {
 			    	{
 				    	final StringBuilder pass = new StringBuilder();
 				    	 
-				    	for (int i = 0; i < 8; i++)
+				    	for (int i = 0; i < 4; i++)
 			                    pass.append(chars.charAt(rnd.nextInt(chars.length())));
 				    	   
 				    	String checkCode = null;
