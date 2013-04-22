@@ -25,11 +25,11 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		final TextView rastgele = (TextView)findViewById(R.id.textView1);
-		final TextView rastgele2 = (TextView)findViewById(R.id.textView2);
+		final TextView random1 = (TextView)findViewById(R.id.textView1);
+		final TextView random12 = (TextView)findViewById(R.id.textView2);
 		
-		final Timer zamanlayici;
-		final Handler yardimci;
+		final Timer timer1;
+		final Handler helper1;
 		final long ZAMAN = 1000;
 		 
 		final String chars = "abcdefghijklmnopqrstuvwxyz"
@@ -37,16 +37,16 @@ public class MainActivity extends Activity {
 	    
 		final Random rnd = new SecureRandom();
 		 
-		zamanlayici = new Timer();
-		yardimci = new Handler(Looper.getMainLooper());
+		timer1 = new Timer();
+		helper1 = new Handler(Looper.getMainLooper());
 			  
-		zamanlayici.scheduleAtFixedRate(new TimerTask()
+		timer1.scheduleAtFixedRate(new TimerTask()
 		{
-		    int sayi = 0;
+		    int counter1 = 0;
 		    @Override
 		    public void run()
 		    {
-			    yardimci.post(new Runnable()
+			    helper1.post(new Runnable()
 			    {
 			    	public void run()
 			    	{
@@ -66,35 +66,35 @@ public class MainActivity extends Activity {
 							e.printStackTrace();
 						}
 			 			
-				 		rastgele2.setText(checkCode);
+				 		random12.setText(checkCode);
 				 		
-				 		sayi = sayi + 1;
+				 		counter1 = counter1 + 1;
 			    	}
 			    });
 		     }
 		  }, 0, 10000);
 	
-		final Timer zamanlayici1;
-		final Handler yardimci1;
+		final Timer timer11;
+		final Handler helper11;
 		
-		zamanlayici1 = new Timer();
-		yardimci1 = new Handler(Looper.getMainLooper());
+		timer11 = new Timer();
+		helper11 = new Handler(Looper.getMainLooper());
 			  
-		zamanlayici1.scheduleAtFixedRate(new TimerTask()
+		timer11.scheduleAtFixedRate(new TimerTask()
 		{
-			int sayi = 10;
+			int counter1 = 10;
 			   @Override
 			   public void run()
 			   {
-				   yardimci1.post(new Runnable()
+				   helper11.post(new Runnable()
 				    {
 					     public void run()
 					     {
-					 		rastgele.setText(String.valueOf(sayi));
-							if (sayi == 0) 
-								sayi = 10;
+					 		random1.setText(String.valueOf(counter1));
+							if (counter1 == 0) 
+								counter1 = 10;
 							
-							sayi = sayi - 1;
+							counter1 = counter1 - 1;
 					     }
 					});
 			   }
