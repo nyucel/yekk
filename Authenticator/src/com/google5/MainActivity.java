@@ -30,7 +30,6 @@ public class MainActivity extends Activity {
 		
 		final Timer timer1;
 		final Handler helper1;
-		final long ZAMAN = 1000;
 		 
 		final String chars = "abcdefghijklmnopqrstuvwxyz"
 	                + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
