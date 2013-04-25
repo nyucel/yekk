@@ -3,6 +3,6 @@
 
     <string name="app_name">Yekk</string>
     <string name="action_settings">Settings</string>
-    <string name="otp">Tek Kullanımlık Parola</string>
+    <string name="otp">One-Time Password</string>
 
 </resources>
